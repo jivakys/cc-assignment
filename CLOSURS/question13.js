@@ -1,8 +1,9 @@
-function createBankAccount(balance) {
+function createBankAccount(initialbalance) {
+  let balance = initialbalance;
   return {
     deposit: (amount) => (balance += amount),
     withdraw: (amount) =>
-      balance >= amount ? (balance -= amount) : "Unsufficient amount",
+      balance > amount ? (balance -= amount) : "Unsufficient amount",
     getBalance: () => balance,
   };
 }
