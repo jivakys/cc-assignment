@@ -47,5 +47,5 @@ app.get("/courses", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`✅ LMS server running at http://localhost:${PORT}`);
+  console.log(`server running at http://localhost:${PORT}`);
 });

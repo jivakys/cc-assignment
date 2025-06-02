@@ -1,3 +1,14 @@
 {
-  "courses": []
+  "courses": [
+    {
+      "id": 1748878828541,
+      "title": "Frontend Development",
+      "description": "Develop a user interface using html, css and react."
+    },
+    {
+      "id": 1748878893743,
+      "title": "Backend Development",
+      "description": "Build a Server using node, express and NoSQL DB."
+    }
+  ]
 }
