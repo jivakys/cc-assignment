@@ -11,6 +11,8 @@ npm install
 node index.js
 ```
 
+## API Endpoints
+
 - GET /courses - Retrieve all courses.
 
 - POST /courses - Create a new course.
