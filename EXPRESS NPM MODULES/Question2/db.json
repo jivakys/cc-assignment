@@ -1,0 +1,14 @@
+{
+  "courses": [
+    {
+      "id": 1748939598347,
+      "title": "Backend Development",
+      "description": "The backend refers to the server-side of a web application, where the core functionality of the application is implemented. It is responsible for processing client requests, managing databases, performing business logic, and ensuring that the appropriate data and services are delivered to the frontend."
+    },
+    {
+      "id": 1748939735171,
+      "title": "Frontend Development",
+      "description": " Frontend,which is user-facing, develop using html, css and javascript."
+    }
+  ]
+}
