@@ -4,12 +4,12 @@
 
 ## Features
 
-- Add a new dish
-- Get all dishes
-- Get a dish by ID
-- Update a dish by ID
-- Delete a dish by ID
-- Search dishes by full or partial name
+- Add a new book
+- Get all books
+- Get a book by ID
+- Update a book by ID
+- Delete a book by ID
+- Search books by full or partial **author** or **title**
 - Proper error handling and 404 support
 
 ---
@@ -19,8 +19,6 @@
 - Node.js
 - Express.js
 - File system (`fs`) for JSON-based storage
-
----
 
 ---
 
@@ -53,40 +51,48 @@ http://localhost:3000
 
 ## API Endpoints
 
-- Add New Dish
+- Add New Book
 
 ```bash
-POST /dishes
+POST /books
 ```
 
-- Get All Dishes
+- Get All Books
 
 ```bash
-GET /dishes
+GET /books
 ```
 
-- Get Dish by ID
+- Get book by ID
 
 ```bash
-POST /dishes/:id
+POST /books/:id
 ```
 
-- Search Dish by Name (Partial Match Supported)
+- Search Books by Author (Partial Match Supported)
 
 ```bash
-GET /dishes/get?name=idly
+GET /books/search?author=arvind
+
 ```
 
-- Update Dish by ID
+- Search Books by Title (Partial Match Supported)
 
 ```bash
-PUT /dishes/:id
+GET /books/search?title=White
+
 ```
 
-- Delete Dish by ID
+- Update Book by ID
 
 ```bash
-DELETE /dishes/:id
+PUT /books/:id
+```
+
+- Delete Book by ID
+
+```bash
+DELETE /books/:id
 ```
 
 - Undefined Routes
