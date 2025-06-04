@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Buy groceries",
+    "completed": false
+  },
+  {
+    "id": 2,
+    "title": "Complete assignments",
+    "completed": true
+  },
+  {
+    "id": 3,
+    "title": "Go to gym",
+    "completed": true
+  }
+]
