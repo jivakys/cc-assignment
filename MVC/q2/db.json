@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Login Issue",
+    "description": "Unable to login",
+    "priority": "high",
+    "user": "User1",
+    "status": "pending"
+  },
+  {
+    "id": 2,
+    "title": "Cors error",
+    "description": "Unable to request different origin",
+    "priority": "medium",
+    "user": "User2",
+    "status": "pending"
+  }
+]
