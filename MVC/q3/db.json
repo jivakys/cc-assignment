@@ -1,0 +1,18 @@
+[
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "genre": "Fiction",
+    "publishedYear": 1925,
+    "id": 1749059900537,
+    "status": "available"
+  },
+  {
+    "title": "Wings of fire",
+    "author": "APJ Abdul Kalam",
+    "genre": "Biography",
+    "publishedYear": 1999,
+    "id": 1749060012274,
+    "status": "available"
+  }
+]
