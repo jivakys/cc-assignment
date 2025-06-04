@@ -1,4 +1,4 @@
-# Dish API - Express.js CRUD Application
+# Book API - Express.js CRUD Application
 
 ---
 
