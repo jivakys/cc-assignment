@@ -1,5 +1,5 @@
 ## Switch to the required database
-use ToDoList
+use ToDoList_DB
 
 ## Insert sample tasks into the 'tasks' collection
 db.tasks.insertMany([
