@@ -1,0 +1,53 @@
+## 1. Use the Library_DB database
+use Library_DB
+
+## 2. Insert sample book records into the 'books' collection
+db.books.insertMany([
+  {
+    book_id: 1,
+    title: "Wings of Fire",
+    author: "Dr. APJ Abdul Kalam",
+    genre: "Biography",
+    available: true
+  },
+  {
+    book_id: 2,
+    title: "Sapiens",
+    author: "Yuval Noah Harari",
+    genre: "non-fiction",
+    available: true
+  },
+  {
+    book_id: 3,
+    title: "The Silent Patient",
+    author: "Alex Michaelides",
+    genre: "thriller",
+    available: false
+  },
+  {
+    book_id: 4,
+    title: "1984",
+    author: "George Orwell",
+    genre: "fiction",
+    available: false
+  },
+  {
+    book_id: 5,
+    title: "Educated",
+    author: "Tara Westover",
+    genre: "non-fiction",
+    available: true
+  }
+])
+
+## 3. Retrieve all books
+db.books.find()
+
+## 4. Retrieve books based on their genre (e.g., all fiction books)
+db.books.find({ genre: "fiction" })
+
+## 5. Retrieve only available books
+db.books.find({ available: true })
+
+## 6. Create a unique index on book_id to avoid duplicates
+db.books.createIndex({ book_id: 1 }, { unique: true })
