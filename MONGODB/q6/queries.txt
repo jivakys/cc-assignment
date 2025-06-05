@@ -1,0 +1,63 @@
+## Switch to the required database
+use ToDoList
+
+## Insert sample tasks into the 'tasks' collection
+db.tasks.insertMany([
+  {
+    task_id: 1,
+    task_name: "Buy groceries",
+    description: "Rice, Bread, Milk",
+    status: "completed",
+    due_date: new Date("2025-06-04")
+  },
+  {
+    task_id: 2,
+    task_name: "Complete MongoDB Assignment",
+    description: "Working on final submission",
+    status: "in-progress",
+    due_date: new Date("2025-06-05")
+  },
+  {
+    task_id: 3,
+    task_name: "Workout",
+    description: "Go to the gym",
+    status: "completed",
+    due_date: new Date("2025-06-01")
+  },
+  {
+    task_id: 4,
+    task_name: "Watch Movie",
+    description: "watch new release Movie with family",
+    status: "pending",
+    due_date: new Date("2025-06-08")
+  },
+  {
+    task_id: 5,
+    task_name: "Pay electricity bill",
+    description: "Due for this month",
+    status: "pending",
+    due_date: new Date("2025-06-05")
+  }
+])
+
+## 1. Retrieve all tasks
+db.tasks.find()
+
+## 2. Retrieve tasks based on status (e.g., only pending tasks)
+db.tasks.find({ status: "pending" })
+db.tasks.find({ status: "completed" })
+
+## 3. Retrieve tasks with due date in the next 7 days
+const today = new Date()
+const next7Days = new Date()
+next7Days.setDate(today.getDate() + 7)
+
+db.tasks.find({
+  due_date: {
+    $gte: today,
+    $lte: next7Days
+  }
+})
+
+## 4. Create a unique index on task_id
+db.tasks.createIndex({ task_id: 1 }, { unique: true })
