@@ -1,0 +1,47 @@
+
+// Switch to the required database
+use Order_DB
+
+// Insert sample orders into the 'orders' collection
+db.orders.insertMany([
+  {
+    customer_name: "Rohit Sharma",
+    items: ["Bat", "Ball"],
+    total_amount: 55000,
+    order_status: "pending"
+  },
+  {
+    customer_name: "Axar Patel",
+    items: ["Book", "Notebook"],
+    total_amount: 700,
+    order_status: "delivered"
+  },
+  {
+    customer_name: "Smriti Mandhana",
+    items: ["Mobile Phone", "Charger"],
+    total_amount: 12000,
+    order_status: "shipped"
+  },
+  {
+    customer_name: "Virat Kohli",
+    items: ["Tshirts", "Shoes"],
+    total_amount: 18000,
+    order_status: "pending"
+  },
+  {
+    customer_name: "Hardik Pandya",
+    items: ["Headphones", "IPad"],
+    total_amount: 900,
+    order_status: "delivered"
+  }
+])
+
+// 1. Retrieve all orders
+db.orders.find()
+
+// 2. Retrieve orders with a specific status (e.g., "pending")
+db.orders.find({ order_status: "pending" })
+
+// 3. Retrieve orders with a total amount greater than Rs. 1000
+db.orders.find({ total_amount: { $gt: 1000 } })
+
