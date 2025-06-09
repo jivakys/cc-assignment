@@ -1,0 +1,25 @@
+## Aggregation Queries ##
+
+### 1. Find the total salary paid in each department.
+
+db.employees.aggregate([
+  {
+    $group: {
+      _id: "$departmentId",
+      totalSalary: { $sum: "$salary" }
+    }
+  }
+])
+
+
+
+### 2. Retrieve employee details along with their department information.
+    
+### 3. Find employees who earn more than Rs. 60,000.
+    
+
+### 4. Calculate the average salary for each department.
+    
+
+### 5. Retrieve all employees along with their respective department details.
+    
