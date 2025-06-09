@@ -47,4 +47,17 @@
         }
     ])
 
-Retrieve all orders with customer details, ensuring each order has an associated customer record.
+### 5. Retrieve all orders with customer details, ensuring each order has an associated customer record.
+    db.orders.aggregate([
+        {
+            $lookup: {
+            from: "customers",
+            localField: "customerId",
+            foreignField: "_id",
+            as: "customer"
+            }
+        },
+        {
+            $unwind: "$customer"
+        }
+    ])
