@@ -13,6 +13,19 @@
 
 
 ## 2. Retrieve order details along with corresponding customer information.
+    db.orders.aggregate([
+  {
+    $lookup: {
+      from: "customers",
+      localField: "customerId",
+      foreignField: "_id",
+      as: "customerInfo"
+    }
+  },
+  {
+    $unwind: "$customerInfo"
+  }
+])
 
 Find orders where the amount is greater than Rs. 500.
 Calculate the average order amount per customer.
