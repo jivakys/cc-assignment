@@ -11,4 +11,4 @@ loanRouter.post("/loans", async (req, res) => {
   }
 });
 
-module.exports = loanRouter;
+module.exports = { loanRouter };

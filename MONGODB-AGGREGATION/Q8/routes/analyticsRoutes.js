@@ -138,4 +138,4 @@ borrowerRouter.get("/analytics/loan-reports", async (req, res) => {
   }
 });
 
-module.exports = borrowerRouter;
+module.exports = { borrowerRouter };
