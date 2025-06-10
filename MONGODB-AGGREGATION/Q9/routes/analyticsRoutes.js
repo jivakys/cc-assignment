@@ -3,7 +3,6 @@ const analyticsRouter = express.Router();
 const Attendance = require("../models/attendance");
 const mongoose = require("mongoose");
 
-// Total attendance count per employee
 analyticsRouter.get("/analytics/total-attendance", async (req, res) => {
   try {
     const data = await Attendance.aggregate([
@@ -17,7 +16,6 @@ analyticsRouter.get("/analytics/total-attendance", async (req, res) => {
   }
 });
 
-// Attendance history of specific employee
 analyticsRouter.get("/analytics/attendance-history/:id", async (req, res) => {
   try {
     const employeeId = new mongoose.Types.ObjectId(req.params.id);
@@ -29,7 +27,6 @@ analyticsRouter.get("/analytics/attendance-history/:id", async (req, res) => {
   }
 });
 
-// Top attendees (> 95% Present)
 analyticsRouter.get("/analytics/top-attendees", async (req, res) => {
   try {
     const data = await Attendance.aggregate([
@@ -58,7 +55,6 @@ analyticsRouter.get("/analytics/top-attendees", async (req, res) => {
   }
 });
 
-// Absent > 5 times in the current month
 analyticsRouter.get("/analytics/absent-employees", async (req, res) => {
   try {
     const startOfMonth = new Date();
@@ -78,7 +74,6 @@ analyticsRouter.get("/analytics/absent-employees", async (req, res) => {
   }
 });
 
-// Last 5 attendance records for all employees
 analyticsRouter.get("/analytics/recent-attendance", async (req, res) => {
   try {
     const data = await Attendance.aggregate([
@@ -102,4 +97,4 @@ analyticsRouter.get("/analytics/recent-attendance", async (req, res) => {
   }
 });
 
-module.exports = { analyticsRouter };
+module.exports = analyticsRouter;

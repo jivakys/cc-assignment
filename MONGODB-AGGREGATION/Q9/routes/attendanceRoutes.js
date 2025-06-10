@@ -11,4 +11,4 @@ attendanceRouter.post("/attendance", async (req, res) => {
   }
 });
 
-module.exports = { attendanceRouter };
+module.exports = attendanceRouter;
