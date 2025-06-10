@@ -1,7 +1,7 @@
 const express = require("express");
+const mongoose = require("mongoose");
 const analyticsRouter = express.Router();
 const Attendance = require("../models/attendance");
-const mongoose = require("mongoose");
 
 analyticsRouter.get("/analytics/total-attendance", async (req, res) => {
   try {
