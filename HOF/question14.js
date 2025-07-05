@@ -36,4 +36,4 @@ const Input = [
   { name: "Eve", tasksCompleted: 7, rating: 2.8 },
 ];
 
-// console.log(evaluateEmployees(Input));
+console.log(evaluateEmployees(Input));
