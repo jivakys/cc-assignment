@@ -4,6 +4,6 @@ function timer(dur, onComplete) {
   }, dur);
 }
 
-timer(2000, (message) => {
-  console.log(message);
+timer(2000, (msg) => {
+  console.log(msg);
 });
