@@ -1,8 +1,3 @@
-// Begin
-// End
-// Promise Task
-// Timeout Task
-
 console.log("Begin");
 setTimeout(() => {
   console.log("Timeout Task");
