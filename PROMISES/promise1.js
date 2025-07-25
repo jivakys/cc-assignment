@@ -1,7 +1,7 @@
-function timer(dur, onComplete) {
+function timer(duration, onComplete) {
   setTimeout(() => {
-    onComplete(`Timer of ${dur} ms finished`);
-  }, dur);
+    onComplete(`Timer of ${duration} ms finished`);
+  }, duration);
 }
 
 timer(2000, (msg) => {
