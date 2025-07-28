@@ -9,5 +9,5 @@ function createEmployee(name, role, salary) {
   };
 }
 
-const employee1 = createEmployee("Alice", "Developer", 60000);
+const employee1 = createEmployee("Jalaluddin", "Developer", 6000);
 employee1.introduce();
