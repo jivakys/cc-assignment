@@ -44,9 +44,6 @@ library.addBook(book1);
 library.addBook(book2);
 
 library.listBooks();
-// Output:
-// Title: To Kill a Mockingbird, Author: Harper Lee
-// Title: 1984, Author: George Orwell
 
 library.removeBook("1984");
 library.listBooks();
