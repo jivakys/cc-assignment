@@ -8,6 +8,33 @@ function Book(title, author) {
   };
 }
 
+// function createLibrary() {
+//   const books = [];
+
+//   return {
+//     addBook(book) {
+//       books.push(book);
+//     },
+
+//     removeBook(title) {
+//       const index = books.findIndex((book) => book.title === title);
+//       if (index !== -1) {
+//         books.splice(index, 1);
+//       } else {
+//         console.log(`Book titled "${title}" not found.`);
+//       }
+//     },
+
+//     listBooks() {
+//       if (books.length === 0) {
+//         console.log("No books in the library.");
+//         return;
+//       }
+//       books.forEach((book) => book.details());
+//     },
+//   };
+// }
+
 function createLibrary() {
   const books = [];
 
