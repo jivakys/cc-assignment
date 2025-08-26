@@ -1,9 +1,7 @@
 ## Switch to the required database
-
 use ToDoList_DB
 
 ## Insert sample tasks into the 'tasks' collection
-
 db.tasks.insertMany([
   {
     task_id: 1,
@@ -43,16 +41,13 @@ db.tasks.insertMany([
 ])
 
 ## 1. Retrieve all tasks
-
 db.tasks.find()
 
 ## 2. Retrieve tasks based on status (e.g., only pending tasks)
-
 db.tasks.find({ status: "pending" })
 db.tasks.find({ status: "completed" })
 
 ## 3. Retrieve tasks with due date in the next 7 days
-
 const today = new Date()
 const next7Days = new Date()
 next7Days.setDate(today.getDate() + 7)
@@ -65,5 +60,4 @@ db.tasks.find({
 })
 
 ## 4. Create a unique index on task_id
-
 db.tasks.createIndex({ task_id: 1 }, { unique: true })
