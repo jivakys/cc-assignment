@@ -7,7 +7,7 @@ app.use(express.json());
 app.use("/courses", courseRouter);
 
 app.get("/", (req, res) => {
-  res.send(`<h1> Express App Running</h1>`);
+  res.send(`<h1> Express App Running </h1>`);
 });
 
 app.listen(PORT, () => {
